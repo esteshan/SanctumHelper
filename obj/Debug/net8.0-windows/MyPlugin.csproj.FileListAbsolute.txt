@@ -1,0 +1,10 @@
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\bin\Debug\net8.0-windows\MyPlugin.deps.json
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\bin\Debug\net8.0-windows\MyPlugin.dll
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.csproj.AssemblyReference.cache
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.AssemblyInfoInputs.cache
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.AssemblyInfo.cs
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.csproj.CoreCompileInputs.cache
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\MyPlugin.dll
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\refint\MyPlugin.dll
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\ref\MyPlugin.dll
