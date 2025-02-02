@@ -39,17 +39,9 @@ public class SanctumHelper : BaseSettingsPlugin<SanctumHelperSettings>
 
     public override void Render()
     {
-        //Any Imgui or Graphics calls go here. This is called after Tick
-        Graphics.DrawText($"Plugin {GetType().Name} is working.", new Vector2(100, 100), Color.Red);
-
+        
         if (!Settings.Enable) return;
-
-        // Get player position and draw text
-        var playerPos = GameController.Player.Pos;
-        var screenPos = GameController.Game.IngameState.Camera.WorldToScreen(playerPos);
-        var adjustedScreenPos = screenPos + new Vector2(0, Settings.TextOffset);
-        Graphics.DrawText("Plugin Active", adjustedScreenPos, Settings.TextColor, FontAlign.Center);
-
+        
         if (Settings.DrawChestCircles)
         {
             string[] keywords = { "Jewels", "test", "test" };
