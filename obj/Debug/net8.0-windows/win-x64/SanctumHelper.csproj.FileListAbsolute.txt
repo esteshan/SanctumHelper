@@ -8,3 +8,4 @@ C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891
 C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\win-x64\SanctumHelper.dll
 C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\win-x64\refint\SanctumHelper.dll
 C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\win-x64\ref\SanctumHelper.dll
+C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\obj\Debug\net8.0-windows\win-x64\SanctumHelper.sourcelink.json
