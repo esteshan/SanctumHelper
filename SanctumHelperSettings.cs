@@ -34,5 +34,12 @@ public class SanctumHelperSettings : ISettings
     
     public RangeNode<int> ProjectilesThickness { get; set; } = new RangeNode<int>(3, 1, 10);
     
-        // Setting for Reward Window
+    // Settings for wall circles
+    public ToggleNode DrawTimeWall { get; set; } = new ToggleNode(true);
+    public ColorNode WallsCircleColor { get; set; } = new ColorNode(Color.Blue);
+    public RangeNode<int> WallsCircleRadius { get; set; } = new RangeNode<int>(300, 50, 1000);
+    
+    public RangeNode<int> WallsThickness { get; set; } = new RangeNode<int>(3, 1, 10);
+    
+
 }

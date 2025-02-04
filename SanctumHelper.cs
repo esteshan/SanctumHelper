@@ -4,90 +4,94 @@ using ExileCore2;
 using ExileCore2.PoEMemory.MemoryObjects;
 using Vector2 = System.Numerics.Vector2;
 using ExileCore2.Shared.Enums;
-
-namespace SanctumHelper;
-
-public class SanctumHelper : BaseSettingsPlugin<SanctumHelperSettings>
+using System;
 
 
+namespace SanctumHelper
 {
-    public override bool Initialise()
+    public class SanctumHelper : BaseSettingsPlugin<SanctumHelperSettings>
     {
-        //Perform one-time initialization here
-
-        //Maybe load you custom config (only do so if builtin settings are inadequate for the job)
-        //var configPath = Path.Join(ConfigDirectory, "custom_config.txt");
-        //if (File.Exists(configPath))
-        //{
-        //    var data = File.ReadAllText(configPath);
-        //}
-
-        return true;
-    }
-
-    public override void AreaChange(AreaInstance area)
-    {
-        //Perform once-per-zone processing here
-        //For example, Radar builds the zone map texture here
-    }
-
-    public override void Tick()
-    {
-        //Perform non-render-related work here, e.g. position calculation.
-        //var a = Math.Sqrt(7);
-    }
-
-    public override void Render()
-    {
-
-        if (!Settings.Enable) return;
-
-        if (Settings.DrawChestCircles)
+        public override bool Initialise()
         {
-            string[] keywords = { "Jewels", "test", "test" };
-
-            foreach (var entity in GameController.Entities.Where(entity =>
-                         keywords.Any(keyword => entity.Metadata.Contains(keyword))))
-
-            {
-                var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.CircleRadius, Settings.ChestCircleColor,
-                    Settings.CircleThickness, 50);
-            }
+            return true;
         }
 
-        if (Settings.DrawTimeTrialCollectCircles)
+        public override void AreaChange(AreaInstance area)
         {
-            foreach (var entity in GameController.Entities.Where(entity =>
-                         entity.Metadata.Contains("TimeTrialCollectable")))
-            {
-                var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.TimeTrialCollectCircleRadius,
-                    Settings.TimeTrialCollectCircleColor, Settings.TimeTrialThickness, 50);
-            }
+            // Perform zone-specific actions
         }
 
-        if (Settings.DrawTimeProjectiles)
+        public override void Tick()
         {
-            foreach (var entity in GameController.Entities.Where(entity =>
-                         entity.Metadata.Contains("Projectiles") && entity.IsHostile))
-            {
-                var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.ProjectilesCircleRadius, Settings.ProjectilesCircleColor,
-                    Settings.ProjectilesThickness, 50);
-            }
+            // Perform non-render-related updates
+        }
+
+       public override void Render()
+{
+    if (!Settings.Enable) return;
+
+    if (Settings.DrawChestCircles)
+    {
+        string[] keywords = { "Jewels", "test", "test" };
+
+        foreach (var entity in GameController.Entities.Where(entity =>
+                     keywords.Any(keyword => entity.Metadata.Contains(keyword))))
+        {
+            var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
+            Graphics.DrawCircle(entityScreenPos, Settings.CircleRadius, Settings.ChestCircleColor,
+                Settings.CircleThickness, 50);
         }
     }
 
-
-    public override void EntityAdded(Entity entity)
+    if (Settings.DrawTimeTrialCollectCircles)
     {
-        //If you have a reason to process every entity only once,
-        //this is a good place to do so.
-        //You may want to use a queue and run the actual
-        //processing (if any) inside the Tick method.
+        foreach (var entity in GameController.Entities.Where(entity =>
+                     entity.Metadata.Contains("TimeTrialCollectable")))
+        {
+            var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
+            Graphics.DrawCircle(entityScreenPos, Settings.TimeTrialCollectCircleRadius,
+                Settings.TimeTrialCollectCircleColor, Settings.TimeTrialThickness, 50);
+        }
     }
 
+    if (Settings.DrawTimeProjectiles)
+    {
+        foreach (var entity in GameController.Entities.Where(entity =>
+                     entity.Metadata.Contains("Projectiles") && entity.IsHostile))
+        {
+            var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
+            Graphics.DrawCircle(entityScreenPos, Settings.ProjectilesCircleRadius, Settings.ProjectilesCircleColor,
+                Settings.ProjectilesThickness, 50);
+        }
+    }
 
+    if (Settings.DrawTimeWall)
+    {
+        foreach (var entity in GameController.Entities.Where(entity =>
+                     entity.Metadata.Contains("SanctumLogicDoor") && entity.IsHostile))
+        {
+            var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
+
+            // Directly access entity.DistancePlayer
+            if (entity.DistancePlayer >= 0f && entity.DistancePlayer <= 4.5f)
+            {
+                Graphics.DrawCircle(entityScreenPos, Settings.WallsCircleRadius, Color.Green,
+                    Settings.WallsThickness, 50);
+            }
+            else
+            {
+                Graphics.DrawCircle(entityScreenPos, Settings.WallsCircleRadius, Settings.WallsCircleColor,
+                    Settings.WallsThickness, 50);
+            }
+        }
+    }
 }
 
+
+
+        public override void EntityAdded(Entity entity)
+        {
+            // Process entity once when added
+        }
+    }
+}
