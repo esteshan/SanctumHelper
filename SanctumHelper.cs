@@ -77,8 +77,9 @@ public class SanctumHelper : BaseSettingsPlugin<SanctumHelperSettings>
                     Settings.ProjectilesThickness, 50);
             }
         }
+    }
 
-    
+
     public override void EntityAdded(Entity entity)
     {
         //If you have a reason to process every entity only once,
