@@ -39,41 +39,46 @@ public class SanctumHelper : BaseSettingsPlugin<SanctumHelperSettings>
 
     public override void Render()
     {
-        
+
         if (!Settings.Enable) return;
-        
+
         if (Settings.DrawChestCircles)
         {
             string[] keywords = { "Jewels", "test", "test" };
-            
+
             foreach (var entity in GameController.Entities.Where(entity =>
                          keywords.Any(keyword => entity.Metadata.Contains(keyword))))
 
             {
                 var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.CircleRadius, Settings.ChestCircleColor, Settings.CircleThickness, 50);
+                Graphics.DrawCircle(entityScreenPos, Settings.CircleRadius, Settings.ChestCircleColor,
+                    Settings.CircleThickness, 50);
             }
         }
-        
+
         if (Settings.DrawTimeTrialCollectCircles)
         {
-            foreach (var entity in GameController.Entities.Where(entity => entity.Metadata.Contains("TimeTrialCollectable")))
+            foreach (var entity in GameController.Entities.Where(entity =>
+                         entity.Metadata.Contains("TimeTrialCollectable")))
             {
                 var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.TimeTrialCollectCircleRadius, Settings.TimeTrialCollectCircleColor, Settings.TimeTrialThickness,50);
+                Graphics.DrawCircle(entityScreenPos, Settings.TimeTrialCollectCircleRadius,
+                    Settings.TimeTrialCollectCircleColor, Settings.TimeTrialThickness, 50);
             }
         }
 
         if (Settings.DrawTimeProjectiles)
         {
-            foreach (var entity in GameController.Entities.Where(entity => entity.Metadata.Contains("Projectiles") && entity.IsHostile))
+            foreach (var entity in GameController.Entities.Where(entity =>
+                         entity.Metadata.Contains("Projectiles") && entity.IsHostile))
             {
                 var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
-                Graphics.DrawCircle(entityScreenPos, Settings.ProjectilesCircleRadius, Settings.ProjectilesCircleColor, Settings.ProjectilesThickness,50);
+                Graphics.DrawCircle(entityScreenPos, Settings.ProjectilesCircleRadius, Settings.ProjectilesCircleColor,
+                    Settings.ProjectilesThickness, 50);
             }
         }
-    }
 
+    
     public override void EntityAdded(Entity entity)
     {
         //If you have a reason to process every entity only once,

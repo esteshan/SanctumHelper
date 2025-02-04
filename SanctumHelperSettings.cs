@@ -33,4 +33,6 @@ public class SanctumHelperSettings : ISettings
     public RangeNode<int> ProjectilesCircleRadius { get; set; } = new RangeNode<int>(300, 50, 1000);
     
     public RangeNode<int> ProjectilesThickness { get; set; } = new RangeNode<int>(3, 1, 10);
+    
+        // Setting for Reward Window
 }
