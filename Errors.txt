@@ -1,2 +1,2 @@
 Build failed:
-[2/4/2025 11:07:20 AM, C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\SanctumHelper.cs(74, 17)] CS0103: The name 'Math' does not exist in the current context
+[2/4/2025 4:10:29 PM, C:\Users\FranciscoJR\Desktop\ExileCore\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\Plugins\Source\SanctumHelper\SanctumHelper.cs(63, 93)] CS1061: 'SanctumHelperSettings' does not contain a definition for 'ProjectilesCircleColor' and no accessible extension method 'ProjectilesCircleColor' accepting a first argument of type 'SanctumHelperSettings' could be found (are you missing a using directive or an assembly reference?)

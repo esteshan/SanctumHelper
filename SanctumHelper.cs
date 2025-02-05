@@ -26,7 +26,7 @@ namespace SanctumHelper
             // Perform non-render-related updates
         }
 
-       public override void Render()
+      public override void Render()
 {
     if (!Settings.Enable) return;
 
@@ -72,7 +72,7 @@ namespace SanctumHelper
         {
             var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
 
-            // Directly access entity.DistancePlayer
+            // Check if DistancePlayer is within the range 0 to 4.5
             if (entity.DistancePlayer >= 0f && entity.DistancePlayer <= 4.5f)
             {
                 Graphics.DrawCircle(entityScreenPos, Settings.WallsCircleRadius, Color.Green,
@@ -85,7 +85,20 @@ namespace SanctumHelper
             }
         }
     }
+
+    // ✅ NEW: Draw SanctumMote Circles
+    if (Settings.DrawSanctumMote)
+    {
+        foreach (var entity in GameController.Entities.Where(entity =>
+                     entity.Metadata.Contains("SanctumMote")))
+        {
+            var entityScreenPos = GameController.Game.IngameState.Camera.WorldToScreen(entity.Pos);
+            Graphics.DrawCircle(entityScreenPos, Settings.SanctumMoteCircleRadius, Settings.SanctumMoteCircleColor,
+                Settings.SanctumMoteThickness, 50);
+        }
+    }
 }
+
 
 
 

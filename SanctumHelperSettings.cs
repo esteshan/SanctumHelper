@@ -41,5 +41,12 @@ public class SanctumHelperSettings : ISettings
     
     public RangeNode<int> WallsThickness { get; set; } = new RangeNode<int>(3, 1, 10);
     
+    // Settings for SanctumMote circles
+    public ToggleNode DrawSanctumMote { get; set; } = new ToggleNode(true);
+    public ColorNode SanctumMoteCircleColor { get; set; } = new ColorNode(Color.Yellow);
+    public RangeNode<int> SanctumMoteCircleRadius { get; set; } = new RangeNode<int>(250, 50, 1000);
+    public RangeNode<int> SanctumMoteThickness { get; set; } = new RangeNode<int>(3, 1, 10);
+
+    
 
 }
