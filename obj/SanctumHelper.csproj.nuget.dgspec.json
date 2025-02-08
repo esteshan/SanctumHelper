@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper\\SanctumHelper.csproj": {}
+    "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper-main\\SanctumHelper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper\\SanctumHelper.csproj": {
+    "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper-main\\SanctumHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper\\SanctumHelper.csproj",
+        "projectUniqueName": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper-main\\SanctumHelper.csproj",
         "projectName": "SanctumHelper",
-        "projectPath": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper\\SanctumHelper.csproj",
+        "projectPath": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper-main\\SanctumHelper.csproj",
         "packagesPath": "C:\\Users\\FranciscoJR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper\\obj\\",
+        "outputPath": "C:\\Users\\FranciscoJR\\Desktop\\ExileCore\\ExileCore2_241224-1.0.0+a10ab938b50d8c891ad85647cc301ff480479733\\Plugins\\Source\\SanctumHelper-main\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FranciscoJR\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -72,11 +72,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
         }
       }
     }
